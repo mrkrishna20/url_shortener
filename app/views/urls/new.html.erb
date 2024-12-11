@@ -1,0 +1,16 @@
+<h1>Create shortened URL</h1>
+
+<%= form_with model: @url, local: true do |f| %>
+  <%= f.label :long_url, "Enter your URL" %>
+  <%= f.text_field :long_url %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<% if flash[:success] %>
+  <p style="color: green;"><%= flash[:success] %></p>
+<% end %>
+
+<% if flash[:error] %>
+  <p style="color: red;"><%= flash[:error] %></p>
+<% end %>
