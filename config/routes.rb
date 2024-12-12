@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   resources :urls, only: [:new, :create, :show]
 
   get '/:short_url', to: 'urls#redirect_original_url', as: :redirect_original_url
+
+  namespace :api do
+    namespace :v1 do
+      resources :urls, only: [:create]
+      post 'signup', to: 'auth#signup'
+      post 'login', to: 'auth#login'
+    end
+  end
 end
