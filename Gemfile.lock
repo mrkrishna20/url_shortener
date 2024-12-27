@@ -137,7 +137,7 @@ GEM
     json-schema (5.1.1)
       addressable (~> 2.8)
       bigdecimal (~> 3.1)
-    jwt (2.9.3)
+    jwt (2.10.1)
       base64
     kamal (2.3.0)
       activesupport (>= 7.0)
