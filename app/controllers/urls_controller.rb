@@ -22,7 +22,7 @@ class UrlsController < ApplicationController
   end
 
   def redirect_original_url
-    @url = current_user.urls.find_by(short_url: params[:short_url])
+    @url = Url.find_by(short_url: params[:short_url])
     if @url
       redirect_to @url.long_url, allow_other_host: true
     else
